@@ -1,6 +1,8 @@
 @import './base.scss';
 
 $color: #b3b2b2;
+$border_box: border-box;
+$inline_block: inline-block;
 
 // 头部区域
 header {
@@ -15,6 +17,7 @@ header {
     margin-bottom: .18rem;
     display: flex;
     justify-content: flex-end;
+
     li {
       font-size: .12rem;
 
@@ -28,7 +31,7 @@ header {
     li:not(:last-of-type) {
       &::after {
         content: '';
-        display: inline-block;
+        display: $inline_block;
         width: .01rem;
         height: .16rem;
         background-color: $color;
@@ -42,6 +45,7 @@ header {
     float: left;
     width: 2.49rem;
     height: .34rem;
+
     a {
       display: block;
       width: 100%;
@@ -58,12 +62,14 @@ header {
     float: right;
     margin-top: .22rem;
     margin-bottom: .31rem;
+
     .lis {
       li {
         margin-left: .27rem;
         float: left;
         font-size: .14rem;
-        box-sizing: border-box;
+        box-sizing: $border_box;
+
         a {
           color: #7a7878;
           padding: .05rem .1rem .05rem .14rem;
@@ -79,6 +85,7 @@ header {
             background-color: #1abc9c;
             margin-top: .1rem;
           }
+
           a {
             color: #f64f5b;
           }
@@ -90,3 +97,112 @@ header {
 
 // banner 区域
 
+main {
+  padding-top: 1.37rem;
+  padding-right: 1.05rem;
+  width: 100%;
+  background-image: url('../../assets/images/banner_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  box-sizing: $border_box;
+
+  .banner_wrap {
+    font-size: 0;
+
+    // 第一个耳机区域的样式
+    figure {
+      display:$inline_block;
+      img {
+        // float: left;
+        
+      }
+    }
+
+    .banner_right {
+      float: right;
+      display: $inline_block;
+      margin-top: .48rem;
+      background-color: red;
+      color: #fff;
+      text-align: right;
+      p {
+        font-size: .26rem;
+      }
+
+      h4 {
+        font-size: .3rem;
+      }
+
+      .banner_right_btn {
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: .05rem;
+          text-align: right;
+          li {
+            // float: left;
+            width: 1.7rem;
+            background-color: #3498db;
+            border-radius: .08rem;
+            font-size: .18rem;
+            line-height: .56rem;
+            text-align: center;
+
+            &:hover a {
+              font-weight: bold;
+            }
+
+            &:not(:last-child) {
+              margin-right: .16rem;
+              background-color: #1abc9c;
+            }
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// what we do
+.introduction {
+  background-color: #38373d;
+  text-align: center;
+  .introduction_title {
+    padding-top: .34rem;
+    color: #fff;
+    font-size: .26rem;
+    p {
+      margin-top: .1rem;
+      margin-bottom: .4rem;
+      font-size: .18rem;
+    }
+  }
+  .introduction_lis {
+    display: flex;
+    justify-content: center;
+    li {
+      width: 1.8rem;
+      color: #fff;
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+      span {
+        display: block;
+        font-size: .16rem;
+        margin-top: .3rem;
+        margin-bottom: .3rem;
+      }
+      p {
+        font-size: .12rem;
+      }
+    }
+    .install {}
+    .customization{}
+    .service {}
+  }
+}

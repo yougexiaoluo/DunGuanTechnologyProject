@@ -25,14 +25,9 @@ strong,
 dl,
 dt,
 dd,
-table,
-tbody,
-thead,
-tfoot,
-audio,
-video,
 header,
 section,
+figure,
 main,
 article,
 aside,
@@ -46,7 +41,7 @@ body,
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  margin-bottom: 300px;
   font-family: "Mcrosoft YaHei", "STHeiti", "SimSun", "KaiTi";
 }
 
@@ -171,6 +166,96 @@ header nav .lis li:first-child::after {
 }
 header nav .lis li:first-child a {
   color: #f64f5b;
+}
+
+main {
+  padding-top: 1.37rem;
+  padding-right: 1.05rem;
+  width: 100%;
+  background-image: url("../../assets/images/banner_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  box-sizing: border-box;
+}
+main .banner_wrap {
+  font-size: 0;
+}
+main .banner_wrap figure {
+  display: inline-block;
+}
+main .banner_wrap .banner_right {
+  float: right;
+  display: inline-block;
+  margin-top: 0.48rem;
+  background-color: red;
+  color: #fff;
+  text-align: right;
+}
+main .banner_wrap .banner_right p {
+  font-size: 0.26rem;
+}
+main .banner_wrap .banner_right h4 {
+  font-size: 0.3rem;
+}
+main .banner_wrap .banner_right .banner_right_btn ul {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.05rem;
+  text-align: right;
+}
+main .banner_wrap .banner_right .banner_right_btn ul li {
+  width: 1.7rem;
+  background-color: #3498db;
+  border-radius: 0.08rem;
+  font-size: 0.18rem;
+  line-height: 0.56rem;
+  text-align: center;
+}
+main .banner_wrap .banner_right .banner_right_btn ul li:hover a {
+  font-weight: bold;
+}
+main .banner_wrap .banner_right .banner_right_btn ul li:not(:last-child) {
+  margin-right: 0.16rem;
+  background-color: #1abc9c;
+}
+main .banner_wrap .banner_right .banner_right_btn ul li a {
+  color: #fff;
+}
+
+.introduction {
+  background-color: #38373d;
+  text-align: center;
+}
+.introduction .introduction_title {
+  padding-top: 0.34rem;
+  color: #fff;
+  font-size: 0.26rem;
+}
+.introduction .introduction_title p {
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.18rem;
+}
+.introduction .introduction_lis {
+  display: flex;
+  justify-content: center;
+}
+.introduction .introduction_lis li {
+  width: 1.8rem;
+  color: #fff;
+}
+.introduction .introduction_lis li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+.introduction .introduction_lis li span {
+  display: block;
+  font-size: 0.16rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.introduction .introduction_lis li p {
+  font-size: 0.12rem;
 }
 
 /*# sourceMappingURL=index.css.map */
