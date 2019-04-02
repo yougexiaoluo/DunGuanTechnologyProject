@@ -3,6 +3,7 @@
 $color: #b3b2b2;
 $border_box: border-box;
 $inline_block: inline-block;
+$color1: #5f5f61;
 
 // 头部区域
 header {
@@ -112,10 +113,11 @@ main {
 
     // 第一个耳机区域的样式
     figure {
-      display:$inline_block;
+      display: $inline_block;
+
       img {
         // float: left;
-        
+
       }
     }
 
@@ -126,6 +128,7 @@ main {
       background-color: red;
       color: #fff;
       text-align: right;
+
       p {
         font-size: .26rem;
       }
@@ -140,6 +143,7 @@ main {
           justify-content: flex-end;
           padding-right: .05rem;
           text-align: right;
+
           li {
             // float: left;
             width: 1.7rem;
@@ -172,37 +176,105 @@ main {
 .introduction {
   background-color: #38373d;
   text-align: center;
+  padding-bottom: 1.05rem;
+
   .introduction_title {
     padding-top: .34rem;
     color: #fff;
     font-size: .26rem;
+
     p {
       margin-top: .1rem;
       margin-bottom: .4rem;
       font-size: .18rem;
     }
   }
+
   .introduction_lis {
     display: flex;
     justify-content: center;
+
     li {
       width: 1.8rem;
       color: #fff;
+      line-height: .16rem;
+
       &:not(:last-of-type) {
         margin-right: 1rem;
       }
+
       span {
         display: block;
         font-size: .16rem;
         margin-top: .3rem;
         margin-bottom: .3rem;
       }
+
       p {
         font-size: .12rem;
       }
     }
-    .install {}
-    .customization{}
-    .service {}
+  }
+}
+
+// 最新资讯
+.news_wrap {
+  overflow: hidden;
+
+  .news_title {
+    margin: .5rem auto .42rem;
+    padding-bottom: .2rem;
+    width: 6.12rem;
+    border-bottom: .02rem solid #e7e7e7;
+    color: $color1;
+    text-align: center;
+    font-size: .26rem;
+    font-weight: bold;
+
+    span {
+      font-size: .24rem;
+    }
+  }
+
+  .news_lis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 8.53rem;
+
+    li {
+      width: 3.94rem;
+      font-size: 0;
+      box-sizing: $border_box;
+      background-repeat: no-repeat;
+      line-height: 1.03rem;
+
+      &:nth-child(2n + 1) {
+        margin-right: .43rem;
+      }
+
+      img {
+        vertical-align: middle;
+        margin-right: .22rem;
+      }
+
+      a {
+        display: inline-block;
+        width: 2.89rem;
+        line-height: .24rem;
+        font-size: .14rem;
+        vertical-align: middle;
+        color: $color1;
+
+        &:hover {
+          font-weight: bold;
+        }
+
+        span {
+          float: right;
+        }
+      }
+    }
   }
 }

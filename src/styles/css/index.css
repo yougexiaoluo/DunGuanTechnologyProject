@@ -39,9 +39,8 @@ footer {
 
 body,
 html {
-  height: 100%;
   width: 100%;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   font-family: "Mcrosoft YaHei", "STHeiti", "SimSun", "KaiTi";
 }
 
@@ -226,6 +225,7 @@ main .banner_wrap .banner_right .banner_right_btn ul li a {
 .introduction {
   background-color: #38373d;
   text-align: center;
+  padding-bottom: 1.05rem;
 }
 .introduction .introduction_title {
   padding-top: 0.34rem;
@@ -244,6 +244,7 @@ main .banner_wrap .banner_right .banner_right_btn ul li a {
 .introduction .introduction_lis li {
   width: 1.8rem;
   color: #fff;
+  line-height: 0.16rem;
 }
 .introduction .introduction_lis li:not(:last-of-type) {
   margin-right: 1rem;
@@ -256,6 +257,58 @@ main .banner_wrap .banner_right .banner_right_btn ul li a {
 }
 .introduction .introduction_lis li p {
   font-size: 0.12rem;
+}
+
+.news_wrap {
+  overflow: hidden;
+}
+.news_wrap .news_title {
+  margin: 0.5rem auto 0.42rem;
+  padding-bottom: 0.2rem;
+  width: 6.12rem;
+  border-bottom: 0.02rem solid #e7e7e7;
+  color: #5f5f61;
+  text-align: center;
+  font-size: 0.26rem;
+  font-weight: bold;
+}
+.news_wrap .news_title span {
+  font-size: 0.24rem;
+}
+.news_wrap .news_lis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 8.53rem;
+}
+.news_wrap .news_lis li {
+  width: 3.94rem;
+  font-size: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  line-height: 1.03rem;
+}
+.news_wrap .news_lis li:nth-child(2n+1) {
+  margin-right: 0.43rem;
+}
+.news_wrap .news_lis li img {
+  vertical-align: middle;
+  margin-right: 0.22rem;
+}
+.news_wrap .news_lis li a {
+  display: inline-block;
+  width: 2.89rem;
+  line-height: 0.24rem;
+  font-size: 0.14rem;
+  vertical-align: middle;
+  color: #5f5f61;
+}
+.news_wrap .news_lis li a:hover {
+  font-weight: bold;
+}
+.news_wrap .news_lis li a span {
+  float: right;
 }
 
 /*# sourceMappingURL=index.css.map */
