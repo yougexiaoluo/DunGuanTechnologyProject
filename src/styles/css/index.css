@@ -81,6 +81,7 @@ em {
 .clearfix:after,
 .clearfix:before {
   content: "";
+  clear: both;
   display: block;
   overflow: hidden;
   visibility: hidden;
@@ -261,6 +262,7 @@ main .banner_wrap .banner_right .banner_right_btn ul li a {
 
 .news_wrap {
   overflow: hidden;
+  padding-bottom: 0.98rem;
 }
 .news_wrap .news_title {
   margin: 0.5rem auto 0.42rem;
@@ -309,6 +311,90 @@ main .banner_wrap .banner_right .banner_right_btn ul li a {
 }
 .news_wrap .news_lis li a span {
   float: right;
+}
+
+.swiper_wrap {
+  margin-bottom: 0.84rem;
+  height: 6.5rem;
+  background-image: url("../../assets/images/picture_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+.swiper_wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.swiper_wrap .swiper_title {
+  margin: 0.31rem auto 0.32rem;
+  padding-bottom: 0.16rem;
+  width: 6.12rem;
+  border-bottom: 0.02rem solid #e7e7e7;
+  color: #fff;
+  font-size: 0.26rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.swiper_wrap .picture_container {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  margin: 0 1.5rem 0 1.47rem;
+  display: flex;
+  justify-content: center;
+}
+.swiper_wrap .picture_container li {
+  width: 2.45rem;
+  height: 2.45rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1.1rem;
+}
+.swiper_wrap .picture_container li:first-child {
+  background-image: url("../../assets/images/picture_01.jpg");
+}
+.swiper_wrap .picture_container li:nth-of-type(2) {
+  width: 3.7rem;
+  height: 3.7rem;
+  background-image: url("../../assets/images/picture_02.jpg");
+  margin: 0 0.6rem;
+}
+.swiper_wrap .picture_container li:nth-of-type(2) ~ li {
+  background-image: url("../../assets/images/picture_03.jpg");
+}
+.swiper_wrap .picture_container li:not(:nth-of-type(2))::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.swiper_wrap .picture_container .btn_wrap div {
+  position: absolute;
+  top: 50%;
+  width: 0.69rem;
+  height: 0.69rem;
+  margin-top: -0.345rem;
+}
+.swiper_wrap .picture_container .btn_wrap .pre {
+  left: 0;
+  background-image: url("../../assets/images/btn_left.png");
+}
+.swiper_wrap .picture_container .btn_wrap .next {
+  background-image: url("../../assets/images/btn_right.png");
+  right: 0;
+}
+
+footer {
+  height: 80px;
+  background-color: red;
 }
 
 /*# sourceMappingURL=index.css.map */

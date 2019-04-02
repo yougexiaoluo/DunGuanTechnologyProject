@@ -4,6 +4,7 @@ $color: #b3b2b2;
 $border_box: border-box;
 $inline_block: inline-block;
 $color1: #5f5f61;
+$width612:6.12rem;
 
 // 头部区域
 header {
@@ -220,11 +221,12 @@ main {
 // 最新资讯
 .news_wrap {
   overflow: hidden;
+  padding-bottom: .98rem;
 
   .news_title {
     margin: .5rem auto .42rem;
     padding-bottom: .2rem;
-    width: 6.12rem;
+    width: $width612;
     border-bottom: .02rem solid #e7e7e7;
     color: $color1;
     text-align: center;
@@ -277,4 +279,106 @@ main {
       }
     }
   }
+}
+
+// 轮播图
+.swiper_wrap {
+  margin-bottom: .84rem;
+  height: 6.5rem;
+  background-image: url('../../assets/images/picture_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .swiper_title {
+    margin: .31rem auto .32rem;
+    padding-bottom: .16rem;
+    width: $width612;
+    border-bottom: .02rem solid #e7e7e7;
+    color: #fff;
+    font-size: .26rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .picture_container {
+    position: relative;
+    z-index: 2;
+    box-sizing: $border_box;
+    margin: 0 1.50rem 0 1.47rem;
+    display: flex;
+    justify-content: center;
+
+    li {
+      // float: left;
+      width: 2.45rem;
+      height: 2.45rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 1.1rem;
+
+      &:first-child {
+        background-image: url('../../assets/images/picture_01.jpg');
+      }
+
+      &:nth-of-type(2) {
+        width: 3.7rem;
+        height: 3.7rem;
+        background-image: url('../../assets/images/picture_02.jpg');
+        margin: 0 .6rem;
+      }
+
+      &:nth-of-type(2)~li {
+        background-image: url('../../assets/images/picture_03.jpg');
+      }
+
+      &:not(:nth-of-type(2))::after {
+        content: '';
+        display: block;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
+      }
+    }
+
+    // 按钮
+    .btn_wrap {
+      div {
+        // 这里是使用定位实现的，到了移动端，漏洞百出，需要解决
+        position: absolute;
+        top: 50%;
+        width: .69rem;
+        height: .69rem;
+        margin-top: -.345rem;
+      }
+
+      .pre {
+        left: 0;
+        background-image: url('../../assets/images/btn_left.png');
+      }
+
+      .next {
+        background-image: url('../../assets/images/btn_right.png');
+        right: 0;
+      }
+    }
+  }
+}
+
+// 底部区域样式
+footer {
+  height: 80px;
+  background-color: red;
 }

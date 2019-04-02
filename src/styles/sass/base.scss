@@ -97,6 +97,7 @@ em {
 .clearfix:after,
 .clearfix:before {
     content: '';
+    clear: both;
     display: block;
     overflow: hidden;
     visibility: hidden;
