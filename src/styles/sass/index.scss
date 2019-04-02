@@ -1,0 +1,92 @@
+@import './base.scss';
+
+$color: #b3b2b2;
+
+// 头部区域
+header {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+
+  //友情链接
+  .links {
+    margin-top: .16rem;
+    margin-bottom: .18rem;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      font-size: .12rem;
+
+      a {
+        color: $color;
+        vertical-align: top;
+      }
+    }
+
+    //除了同类型的最后一个标签不添加伪对象之外的所有li标签都添加
+    li:not(:last-of-type) {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: .01rem;
+        height: .16rem;
+        background-color: $color;
+        margin: 0 .05rem;
+      }
+    }
+  }
+
+  // logo 
+  .logo {
+    float: left;
+    width: 2.49rem;
+    height: .34rem;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -1000rem;
+      background-image: url('../../assets/images/logo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  // 导航栏
+  nav {
+    float: right;
+    margin-top: .22rem;
+    margin-bottom: .31rem;
+    .lis {
+      li {
+        margin-left: .27rem;
+        float: left;
+        font-size: .14rem;
+        box-sizing: border-box;
+        a {
+          color: #7a7878;
+          padding: .05rem .1rem .05rem .14rem;
+        }
+
+        // 修改第一个li标签下a标签的字体颜色
+        &:first-child {
+          &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: .04rem;
+            background-color: #1abc9c;
+            margin-top: .1rem;
+          }
+          a {
+            color: #f64f5b;
+          }
+        }
+      }
+    }
+  }
+}
+
+// banner 区域
+
