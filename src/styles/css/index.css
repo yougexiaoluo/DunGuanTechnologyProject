@@ -32,15 +32,17 @@ main,
 article,
 aside,
 nav,
-footer {
+footer,
+form,
+input {
   margin: 0;
   padding: 0;
 }
 
 body,
 html {
+  height: 100%;
   width: 100%;
-  margin-bottom: 100px;
   font-family: "Mcrosoft YaHei", "STHeiti", "SimSun", "KaiTi";
 }
 
@@ -51,7 +53,7 @@ html {
 a {
   color: #000;
   -webkit-tap-highlight-color: none;
-  outline-color: none;
+  outline: none 0;
   text-decoration: none;
 }
 
@@ -60,8 +62,10 @@ img {
   border: 0 none;
 }
 
-input {
-  outline-color: none;
+input,
+textarea {
+  outline: none;
+  border: 0 none;
 }
 
 ul,
@@ -393,8 +397,104 @@ main .banner_wrap .banner_right .banner_right_btn ul li a {
 }
 
 footer .feedback_wrap {
+  padding-left: 1.74rem;
   height: 4.23rem;
   background-color: #38373d;
+  color: #fff;
+}
+footer .feedback_wrap .feedback_left {
+  float: left;
+  margin-top: 1.94rem;
+  margin-right: 0.2rem;
+}
+footer .feedback_wrap .feedback_left figure {
+  margin-right: 0.33rem;
+  float: left;
+  font-size: 0.12rem;
+  text-align: center;
+}
+footer .feedback_wrap .feedback_left figure figcaption {
+  display: block;
+  margin-top: 0.1rem;
+}
+footer .feedback_wrap .feedback_left .qrC_content {
+  float: left;
+}
+footer .feedback_wrap .feedback_left .qrC_content h5 {
+  font-size: 0.16rem;
+  margin-bottom: 0.24rem;
+}
+footer .feedback_wrap .feedback_left .qrC_content p {
+  font-size: 0.14rem;
+}
+footer .feedback_wrap .feedback_left .qrC_content p:nth-of-type(2) {
+  padding-left: 0.34rem;
+  margin-bottom: 0.12rem;
+}
+footer .feedback_wrap .feedback_left .qrC_content p i {
+  display: inline-block;
+  width: 0.34rem;
+  height: 0.24rem;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+footer .feedback_wrap .feedback_left .qrC_content p i.icon_phone {
+  background-image: url("../../assets/images/phone.png");
+}
+footer .feedback_wrap .feedback_left .qrC_content p i.icon_email {
+  background-image: url("../../assets/images/email.png");
+}
+footer .feedback_wrap .feedback_left .qrC_content p i.icon_seat {
+  background-image: url("../../assets/images/seat.png");
+}
+footer .feedback_wrap .feedback_right {
+  float: left;
+  margin-top: 0.6rem;
+}
+footer .feedback_wrap .feedback_right .contact_title {
+  margin-bottom: 0.12rem;
+  font-size: 0.16rem;
+}
+footer .feedback_wrap .feedback_right form {
+  font-size: 0.13rem;
+}
+footer .feedback_wrap .feedback_right form input {
+  margin-bottom: 0.1rem;
+  padding: 0.13rem 0.12rem 0.15rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0 none;
+  color: #c8cdd1;
+  outline: none;
+  font-size: 0.13rem;
+  border-radius: 5px;
+}
+footer .feedback_wrap .feedback_right form textarea {
+  padding-top: 0.24rem;
+  padding-left: 0.12rem;
+  width: 3.91rem;
+  height: 1.44rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0 none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #c8cdd1;
+  outline: none;
+  resize: none;
+  overflow-x: auto;
+}
+footer .feedback_wrap .feedback_right form .user_info input:first-child {
+  margin-right: 0.21rem;
+}
+footer .feedback_wrap .feedback_right form .btn {
+  margin-top: 0.1rem;
+  text-align: right;
+}
+footer .feedback_wrap .feedback_right form .btn a {
+  padding: 0.08rem 0.35rem;
+  background-color: #3498db;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.14rem;
 }
 footer .copyright_wrap {
   position: relative;
@@ -405,7 +505,7 @@ footer .copyright_wrap {
 footer .copyright_wrap::after {
   content: "";
   position: absolute;
-  top: -0.27rem;
+  top: -0.36rem;
   left: 50%;
   width: 0;
   height: 0;

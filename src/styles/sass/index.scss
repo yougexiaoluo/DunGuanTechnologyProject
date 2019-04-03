@@ -5,6 +5,7 @@ $border_box: border-box;
 $inline_block: inline-block;
 $color1: #5f5f61;
 $width612:6.12rem;
+$white: #c8cdd1;
 
 // 头部区域
 header {
@@ -13,7 +14,7 @@ header {
   overflow: hidden;
   background: #fff;
 
-  //友情链接
+  //友情链接 
   .links {
     margin-top: .16rem;
     margin-bottom: .18rem;
@@ -379,29 +380,160 @@ main {
 
 // 底部区域样式
 footer {
+
+  // 反馈区域样式
   .feedback_wrap {
+    padding-left: 1.74rem;
     height: 4.23rem;
     background-color: #38373d;
+    color: #fff;
+
+    .feedback_left {
+      float: left;
+      margin-top: 1.94rem;
+      margin-right: .2rem;
+
+      figure {
+        margin-right: .33rem;
+        float: left;
+        font-size: .12rem;
+        text-align: center;
+
+        // 图片描述信息
+        figcaption {
+          display: block;
+          margin-top: .1rem;
+        }
+      }
+
+      .qrC_content {
+        float: left;
+
+        h5 {
+          font-size: .16rem;
+          margin-bottom: .24rem;
+        }
+
+        p {
+          font-size: .14rem;
+
+          &:nth-of-type(2) {
+            padding-left: .34rem;
+            margin-bottom: .12rem;
+          }
+
+          i {
+            display: inline-block;
+            width: .34rem;
+            height: .24rem;
+            background-repeat: no-repeat;
+            vertical-align: top;
+
+            &.icon_phone {
+              background-image: url('../../assets/images/phone.png')
+            }
+
+            &.icon_email {
+              background-image: url('../../assets/images/email.png')
+            }
+
+            &.icon_seat {
+              background-image: url('../../assets/images/seat.png')
+            }
+          }
+
+
+        }
+      }
+    }
+
+    .feedback_right {
+      float: left;
+      // background-color: purple;
+      margin-top: .6rem;
+
+      // 用户反馈文字样式
+      .contact_title {
+        margin-bottom: .12rem;
+        font-size: .16rem;
+      }
+
+      form {
+        font-size: .13rem;
+
+        input {
+          margin-bottom: .1rem;
+          padding: .13rem .12rem .15rem;
+          background-color: rgba(0, 0, 0, .5);
+          border: 0 none;
+          color: $white;
+          outline: none;
+          font-size: .13rem;
+          border-radius: 5px;
+        }
+
+        textarea {
+          padding-top: .24rem;
+          padding-left: .12rem;
+          width: 3.91rem;
+          height: 1.44rem;
+          background-color: rgba(0, 0, 0, .5);
+          border: 0 none;
+          box-sizing: $border_box;
+          border-radius: 5px;
+          color: $white;
+          outline: none;
+          // 禁止文本域可缩放功能  -- 小三角
+          resize: none;
+          // 文字超出显示滚动条
+          overflow-x: auto;
+        }
+
+        .user_info {
+          input:first-child {
+            margin-right: .21rem;
+          }
+        }
+
+        .btn {
+          margin-top: .1rem;
+
+          text-align: right;
+
+          a {
+            padding: .08rem .35rem;
+            background-color: #3498db;
+            border-radius: 5px;
+            color: #fff;
+            font-size: .14rem;
+          }
+        }
+      }
+    }
   }
 
+  // 版权区域样式
   .copyright_wrap {
     position: relative;
     padding: .46rem 0 .37rem;
     background-color: #2c3e50;
     text-align: center;
+
     &::after {
       content: '';
       position: absolute;
-      top: -.27rem;
+      top: -.36rem;
       left: 50%;
       width: 0;
       height: 0;
       border: .18rem solid transparent;
       border-bottom-color: #2c3e50;
     }
+
     p {
       font-size: .12rem;
       color: #fff;
+
       &:first-child {
         margin-bottom: .1rem;
       }
