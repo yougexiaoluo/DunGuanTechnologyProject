@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*  
+  初始化样式文件
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+ul,
+ol,
+li,
+img,
+input,
+a,
+p,
+span,
+i,
+em,
+strong,
+dl,
+dt,
+dd,
+header,
+section,
+figure,
+main,
+article,
+aside,
+nav,
+footer,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Mcrosoft YaHei", "STHeiti", "SimSun", "KaiTi";
+}
+
+html {
+  font-size: 100px;
+}
+
+a {
+  color: #000;
+  -webkit-tap-highlight-color: none;
+  outline: none 0;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0 none;
+}
+
+input,
+textarea {
+  outline: none;
+  border: 0 none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+i,
+em {
+  font-family: normal;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+
+header,
+nav,
+section,
+main,
+article,
+aside,
+footer,
+figure {
+  display: block;
+}
+
+body {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=base.css.map */
