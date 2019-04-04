@@ -332,9 +332,6 @@ main .about_wrap figure {
   vertical-align: middle;
   color: #5f5f61;
 }
-.news_wrap .news_lis li a:hover {
-  font-weight: bold;
-}
 .news_wrap .news_lis li a span {
   float: right;
 }
